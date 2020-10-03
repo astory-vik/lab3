@@ -1,0 +1,19 @@
+import random
+
+cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'v', 'd', 'k', 't']
+print(cards)
+wins = 0
+lose = 0
+print("Игра угадай карту.")
+while True:
+    inp = input('Введите ваш выбор: ')
+    botResult = random.randint(1, len(cards) - 1)
+    if inp == cards[botResult]:
+        print("Вы выграли!")
+        wins = wins + 1
+
+    else:
+        print("Вы проиграли!")
+        lose = lose + 1
+    print("Количество побед: " + str(wins) + "\nКоличество проигрышей: " + str(lose))
+
